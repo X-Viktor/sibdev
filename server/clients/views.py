@@ -20,7 +20,6 @@ class DealsViewSet(viewsets.ModelViewSet):
     def list(self, request, *args, **kwargs):
         """ Displays top 5 clients """
         serializer = self.serializer_class(self.queryset, many=True)
-        print(serializer.data)
 
         all_gems = []
         for client in serializer.data:
