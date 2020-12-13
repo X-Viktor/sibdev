@@ -55,7 +55,7 @@ class DealsViewSet(viewsets.ModelViewSet):
                 for i, row in enumerate(reader):
                     if i == 0:
                         pass
-                    if i == 1:
+                    else:
                         Deal.objects.create(
                             customer=row[0],
                             item=row[1],
